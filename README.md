@@ -21,7 +21,7 @@ a node.js Shortener
 * Response:
 ```
 {
-  "id":"The ID of the redirect i.e. https://freddie.pw/[ID]"
+  "id":"The ID of the redirect i.e. https://fre.rest/[ID]"
 }
 ```
 * GET `/:id/data` to get infomation abut the url like 
