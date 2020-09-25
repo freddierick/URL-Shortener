@@ -1,4 +1,7 @@
 # URL- Shortner
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ef60a39d37f4436688a132fbb9485ecd)](https://app.codacy.com/manual/freddierick/URL-Shortener?utm_source=github.com&utm_medium=referral&utm_content=freddierick/URL-Shortener&utm_campaign=Badge_Grade_Settings)
+
 a node.js Shortener
 
 # Features
