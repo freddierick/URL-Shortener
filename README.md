@@ -1,5 +1,6 @@
 # URL- Shortner
-a node.js Shortener
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/3229255a5ef34301847f262fa75db276)](https://www.codacy.com/manual/freddierick/URL-Shortener/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=freddierick/URL-Shortener&amp;utm_campaign=Badge_Grade)
+* a node.js Shortener
 
 # Features
 * uses a open API so anyone can easily create URS with a post request.
