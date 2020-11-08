@@ -76,7 +76,7 @@ app.get(`/:id`, async (req,res) => {
         const url = await urls.findOne({id});
         console.log(url)
         if (url){
-            remIP = req.ip
+            let remIP = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
             const ipInfo = geoip.lookup(remIP);
             toAdd={
                 country:ipInfo.country,
