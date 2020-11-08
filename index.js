@@ -75,21 +75,12 @@ app.get(`/:id`, async (req,res) => {
     try {
         const url = await urls.findOne({id});
         if (url){
-            if(remIP){
-                const ipInfo = geoip.lookup(remIP);
-                toAdd={
-                    country:ipInfo.country,
-                    region:ipInfo.region,
-                    city:ipInfo.city,
-                    time:Date.now(),
-                }
-            }else{
-                toAdd={
-                    country:null,
-                    region:null,
-                    city:null,
-                    time:Date.now(),
-                }
+            const ipInfo = geoip.lookup(remIP);
+            toAdd={
+                country:ipInfo.country,
+                region:ipInfo.region,
+                city:ipInfo.city,
+                time:Date.now()
             }
             await urls.update({id:id},{$push: {hits:toAdd}});
             res.redirect(url.url)
