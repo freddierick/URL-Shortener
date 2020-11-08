@@ -74,10 +74,10 @@ app.get(`/:id`, async (req,res) => {
     const {id} = req.params;
     try {
         const url = await urls.findOne({id});
-        console.log(url)
+        console.log(url,"HELOPDS")
         if (url){
             let remIP = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-            const ipInfo = geoip.lookup(remIP);
+            const ipInfo = await geoip.lookup(remIP);
             toAdd={
                 country:ipInfo.country,
                 region:ipInfo.region,
