@@ -75,8 +75,6 @@ app.get(`/:id`, async (req,res) => {
     try {
         const url = await urls.findOne({id});
         if (url){
-            remIP= req.headers['x-forwarded-for'] || req.connection.remoteAddress
-            if(remIP.startsWith(":")) remIP="86.0.29.184";
             if(remIP){
                 const ipInfo = geoip.lookup(remIP);
                 toAdd={
