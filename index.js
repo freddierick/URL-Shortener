@@ -74,6 +74,7 @@ app.get(`/:id`, async (req,res) => {
     const {id} = req.params;
     try {
         const url = await urls.findOne({id});
+        console.log(url)
         if (url){
             const ipInfo = geoip.lookup(remIP);
             toAdd={
